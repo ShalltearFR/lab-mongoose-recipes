@@ -21,3 +21,29 @@ mongoose
   .catch(error => {
     console.error('Error connecting to the database', error);
   });
+
+Recipe.create({
+  "title": "Burger aux couleurs de l'Italie",
+  "level": "Easy Peasy",
+  "ingredients": [
+    "2 tomatoes",
+    "1 red onion",
+    "15ml basilic cream",
+    "Mayonnaise",
+    "Minced beef",
+    "Italian cheese",
+    "Burger bread",
+    "Salad"
+  ],
+  "cuisine": "Italian",
+  "dishType": "main_course",
+  "image": "https://media.discordapp.net/attachments/988151515145470003/990220495037284432/IMG20220625134227.jpg?width=1706&height=1280",
+  "duration": 25,
+  "creator": "ShalltearFR"
+})
+.then((data) => {
+console.log('process succesful', data)
+})
+.catch((error) => {
+console.log(error)
+})
